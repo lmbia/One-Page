@@ -1,0 +1,780 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+* {
+    font-family: 'Open Sans', 'Helvetica Neue', 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+  
+/* Colores */
+
+body {
+    --base-color: #f5f5f5;
+    --ppal-color: #fc8f00;
+}
+
+.btn-warning {
+    background-color: #fc8f00;
+    color: white;
+}
+
+.btn-warning:hover {
+    background-color: #f5f5f5;
+    color: var(--ppal-color);
+    border: 0;
+}
+
+.color {
+    color: var(--ppal-color);
+}
+
+
+/* Botones y Generales*/
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: none !important;
+}
+
+h2,
+h4 {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#entrenamientos h2 {
+    font-size: 2em;
+    color: white;
+}
+
+
+#contenido-profes h2, #horarios h2, #sedes h2 {
+    font-size: 1.6em;
+}
+
+h3 {
+    font-size: 1.6em;
+    font-weight: bold;
+    text-transform: uppercase;
+} 
+ 
+p {
+    font-size: 1em;
+}
+
+/* Logo */
+
+h1 {
+    width: 80px;
+    height: 80px;
+    background-image: url(../img/logo-flash-running-team-celular.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    overflow: hidden;  
+    margin: 0;
+}
+
+h1 a {
+    display: block;
+    padding: 1em;
+    text-indent: -500px;
+    opacity: 0;
+}
+
+header {
+    background-color: white;
+    border-bottom: 1px solid rgb(216, 216, 216);
+}
+
+li {
+    list-style-type: none;
+}
+
+.icon {
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    text-indent: -999px;
+    overflow: hidden;
+}
+
+.boton {
+    width: 5em;
+    height: 2.5em;
+    line-height: 2.5em;
+    border-radius: .5em;
+    color: white;
+    display: block;
+    background-color: var(--ppal-color);
+    font-weight: bold;
+    text-align: center;
+    transition: ease-in .1s;
+}
+
+.boton:hover {
+    background-color: var(--base-color);
+    color: var(--ppal-color);
+    transition: ease-in .1s;
+}
+
+
+
+/* Menu */
+
+
+#menu {
+    position: absolute;
+    top: 0;
+    padding: 1.5em 0;
+}
+
+#burger {
+    width: 2em;
+    height: 2em;
+    background-image: url(../icons/btn-hamburguesa-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+#burger li {
+    height: 100%;
+}
+
+#burger a {
+    display: block;
+    height: 100%;
+    text-indent: -200px;
+    overflow: hidden;
+}
+
+#burger li:nth-child(2) {
+    display: none;
+}
+
+#menu:target #burger li:nth-child(2) {
+    display: block;
+}
+
+#menu:target #burger li:nth-child(1) {
+    display: none;
+}
+
+#botones {
+    background-color: var(--base-color);
+    position: absolute;
+    top: 0em;
+    right: 0;
+    left: -1200px;
+    transition: all .5s;
+    padding: 5em 1.5em 0 1.5em;
+    height: 100vh; 
+    width: 100vw;
+    z-index: 1000;  
+}
+
+#menu:target #burger {
+    position: absolute;
+    z-index: 1111;
+    background-image: url(../icons/btn-hamburguesa-x-mobile.png);
+}
+
+#menu:target {
+    position: fixed;
+    z-index: 1111;
+}
+
+#menu:target #botones {
+    left: -1.2em;
+    transition: all .5s;
+}
+
+#botones a {
+    display: block;
+    height: 3em;
+    line-height: 3em;
+}
+
+#botones li {
+    border-bottom: 1px solid rgb(230, 230, 230);
+}
+
+#botones li:hover {
+    background-color: var(--ppal-color);
+    padding-left: 1em;
+    transition: all .5s;
+}
+
+#botones li:hover a {
+    color: white;
+}
+
+/* Banner */
+
+.texto-carrusel {
+    position: absolute;
+    top: 0;
+    z-index: 999;
+}
+
+
+/* Entretenimiento */
+
+
+#entrenamientos .row > div  {
+    position: relative;
+    overflow: hidden;
+}
+
+#entrenamientos figure, #entrenamientos figure, #entrenamientos figure, #entrenamientos figure {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#entrenamientos img {
+    display: block;
+}
+
+div:nth-child(1) .icon {
+    background-image: url(../icons/entrena-funcional-icon.png);
+}
+
+div:nth-child(2) .icon {
+    background-image: url(../icons/entrena-running-icon.png);
+}
+
+div:nth-child(3) .icon {
+    background-image: url(../icons/entrena-empresa-icon.png);
+}
+
+div:nth-child(4) .icon {
+    background-image: url(../icons/entrena-personal-icon.png);
+}
+
+#entrenamientos span {
+    text-transform: uppercase;
+    color: white;
+    /* font-size: 0.8em; */
+}
+
+#entrenamientos p {
+    color: white;
+}
+
+
+/* Banner medio */
+
+
+.banner-medio {
+    background-image: url(../img/banner-medio-reto-celular.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+   
+}
+
+.banner-medio span {
+    font-weight: bold;
+}
+
+.banner-medio span:nth-of-type(1), .banner-medio span:nth-of-type(4)  {
+    font-size: 1.6em;
+    font-weight: bold;
+    color: var(--ppal-color);
+}
+
+.banner-medio p {
+    font-size: 2em;
+}
+
+/* Nosotros */
+
+
+.boton-expandir-mas {
+    background-color: var(--ppal-color);
+    display: block;
+    font-size: 0;
+    width: 50px;
+    height: 50px;
+    background-image: url(../icons/btn-expandir-corremos-mas.png);
+    background-size: cover;
+    margin: 40px auto 0 auto;
+}
+
+.boton-contraer-menos {
+    background-color: var(--ppal-color);
+    display: block;
+    font-size: 0;
+    width: 50px;
+    height: 50px;
+    background-image: url(../icons/btn-expandir-corremos-menos.png);
+    background-size: cover;
+    margin: 40px auto 0 auto;
+}
+
+.contenido-oculto {
+    padding-top: 1.2em;
+    display: none;
+}
+
+#contenido-corremos:target .contenido-oculto {
+    display: block;
+}
+
+#contenido-corremos:target .boton-contraer-menos {
+    display: block;
+}
+
+#contenido-corremos:target .boton-expandir-mas {
+    display: none;
+}
+
+.boton-contraer-menos {
+    display: none;
+}
+
+.hid {
+    position: absolute;
+    top: 0;
+    left: -50%;
+
+}
+
+#nosotros .figure {
+   overflow: hidden; 
+   
+}
+
+/* Pastillas */
+
+
+#contenido-profes div div:nth-child(1),
+#horarios div div:nth-child(1),
+#sedes div div:nth-child(1) {
+    background-color: var(--ppal-color);
+    color: white;
+}
+
+.boton-expandir-flecha {
+    display: block;
+    font-size: 0;
+    width: 50px;
+    height: 50px;
+    background-image: url(../icons/btn-expandir-flecha.informacion.png);
+    background-size: contain;
+}
+
+.boton-contraer-flecha {
+    display: block;
+    font-size: 0;
+    width: 50px;
+    height: 50px;
+    background-image: url(../icons/btn-expandir-flecha.informacion.png);
+    background-size: contain;
+    transform: rotate(90deg);
+ 
+}
+
+
+
+/* Pastillas Profes */
+
+
+#contenido-profes .contenido-oculto-profes {
+    display: none;
+}
+
+#contenido-profes:target .contenido-oculto-profes {
+    display: block;
+}
+
+#contenido-profes:target .boton-contraer-flecha {
+    display: block;
+}
+
+#contenido-profes:target .boton-expandir-flecha {
+    display: none;
+}
+
+#contenido-profes .boton-contraer-flecha {
+    display: none;
+}
+
+.contenido-oculto-profes {
+    background-color: var(--base-color);
+
+}
+
+/* Horarios */
+
+
+#horarios .contenido-oculto-horarios {
+    display: none;
+}
+
+#horarios:target .contenido-oculto-horarios {
+    display: block;
+}
+
+#horarios:target .boton-contraer-flecha {
+    display: block;
+}
+
+#horarios:target .boton-expandir-flecha {
+    display: none;
+}
+
+#horarios .boton-contraer-flecha {
+    display: none;
+}
+
+#volverh,
+#volvers {
+    border: 1px solid var(--base-color);
+}
+
+#volverh ul:nth-child(1) {
+    display: inline-block;
+    width: 30%;
+    font-weight: bold;
+}
+
+
+#volverh ul:nth-child(2) {
+    display: inline-block;
+    width: 70%;
+    text-align: right;
+}
+
+
+/* Sedes */
+
+
+#sedes .contenido-oculto-sedes {
+    display: none;
+}
+
+#sedes:target .contenido-oculto-sedes {
+    display: block;
+}
+
+#sedes:target .boton-contraer-flecha {
+    display: block;
+}
+
+#sedes:target .boton-expandir-flecha {
+    display: none;
+}
+
+#sedes .boton-contraer-flecha {
+    display: none;
+}
+
+
+/* Asi entrenamos */
+
+
+.contenido-oculto-e {
+    display: none;
+}
+
+#contenido-entrena:target .contenido-oculto-e {
+    display: block;
+}
+
+#contenido-entrena:target .boton-contraer-menos {
+    display: block;
+}
+
+#contenido-entrena:target .boton-expandir-mas {
+    display: none;
+}
+
+#contenido-entrena .boton-contraer-menos {
+    display: none;
+}
+
+/* Footer */
+
+footer {
+    background-color: var(--base-color);
+}
+
+
+/* Redes sociales */
+
+
+.redes-sociales li {
+    display: block;
+    margin: 0 20px;
+    height: 30px;
+    width: 30px;
+}
+
+.redes-sociales li a {
+    display: block;
+    height: 30px;
+    width: 30px;
+    font-size: 0;
+}
+   
+.redes-sociales li {
+    background-image: url(../icons/redes-sociales-sprite-ngo.png);
+    background-size: cover;
+}
+.redes-sociales li:nth-child(1) {
+    background-position-x: -0.5px;
+}
+
+.redes-sociales li:nth-child(2) {
+    background-position-x: -31px;
+}
+
+.redes-sociales li:nth-child(3) {
+    background-position-x: -62px;
+}
+
+.redes-sociales li:nth-child(4) {
+    background-position-x: -92.5px;
+}
+
+.redes-sociales li:hover {
+    background-image: url(../icons/redes-sociales-sprite-bco.png);
+    background-size: cover;
+}
+.redes-sociales li:nth-child(1):hover {
+    background-position-x: -0.5px;
+}
+
+.redes-sociales li:nth-child(2):hover {
+    background-position-x: -31px;
+}
+
+.redes-sociales li:nth-child(3):hover {
+    background-position-x: -62px;
+}
+
+.redes-sociales li:nth-child(4):hover {
+    background-position-x: -92.5px;
+}
+
+footer small {
+    color: rgb(167, 167, 167);
+}
+
+footer small a {
+    color: rgb(167, 167, 167);
+}
+
+
+/* Flecha Top */
+
+
+.flecha-top {
+    position: fixed;
+    z-index: 500;
+    bottom: 40px;
+    right: 20px;
+}
+
+.flecha-top a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    font-size: 0;
+    background-image: url(../icons/flecha-top-flash-running-icon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 30px;
+    border: 6px solid var(--ppal-color);
+    background-color: var(--ppal-color);
+    transition: ease-in .1s;
+}
+
+.flecha-top a:hover {
+    display: block;
+    width: 50px;
+    height: 50px;
+    font-size: 0;
+    background-image: url(../icons/flecha-top-flash-running-icon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 30px;
+    border: 6px solid var(--base-color);
+    background-color: var(--base-color);
+    transition: ease-in .1s;
+}
+
+/* Formulario */
+
+textarea {
+    resize: none;
+}
+
+
+
+
+
+
+/* TABLET  */
+
+
+@media screen and (min-width: 576px) {
+
+    .banner-medio {  
+        background-image: url(../img/banner-medio-reto-tablet.jpg);
+    }
+
+     .contenido-oculto {
+        display: block;
+    }
+
+    .boton-expandir-mas {
+        display: none;
+    }
+
+    .boton-expandir-flecha,
+    .boton-contraer-flecha {
+        display: none !important;
+    }
+
+    #contenido-profes .contenido-oculto-profes {
+        display: block;
+    }
+
+    #horarios .contenido-oculto-horarios {
+        display: block;
+    }
+
+    #sedes .contenido-oculto-sedes {
+        display: block;
+    }
+
+    .contenido-oculto-e {
+        display: block;
+    }
+
+    form div:nth-child(5) {
+        width: 80px;
+    }
+
+}
+
+
+/* DESKTOP */ 
+
+@media screen and (min-width: 992px) {
+
+
+    #menu {
+        position: initial;
+        top: initial;
+        padding: initial;
+    }
+
+    #menu a {
+        font-size: .8em;
+    }
+
+    #burger {
+        display: none;
+    }
+
+    h1 a {
+        width: 50px;
+        height: 50px;
+        background-image: url(../img/logo-flash-running-team.png);
+        margin: 0 auto;
+    }
+
+    #botones {
+        background-color: initial;
+        position: initial;
+        display: block;
+        top: initial;
+        left: initial;
+        transition: initial;
+        padding: initial;
+        height: initial;
+        width: initial;
+        z-index: initial;
+    }
+
+    #menu:target #botones {
+        left: initial;
+        transition: initial;
+    }
+
+    #menu:target #burger {
+        position: initial;
+        z-index: initial;
+        background-image: initial;
+    }
+    
+    #menu:target {
+        position: initial;
+        z-index: initial;
+    }
+    
+    #menu:target #botones {
+        left: initial;
+        transition: initial;
+        z-index: initial;
+    }
+
+    #botones li {
+        display: inline-block;
+        height: initial;
+        width: initial;
+        height: initial;
+        margin: .8em;
+    }
+
+    #botones a {
+        display: block;
+        height: initial;
+        line-height: initial;
+        border-bottom: initial;
+    }
+
+    #botones a:hover {
+        border-bottom: 1px solid var(--ppal-color);
+        transition: all .3s;
+    }
+
+    #botones li:hover {
+        background-color: initial;
+        padding-left: initial;
+        transition: none;
+    }
+    
+    #botones li:hover a {
+        color: initial;
+    }
+
+    #botones li {
+        border-bottom: none;
+    }
+
+    h2 {
+        font-size: 3em;
+    }
+} 
+
+
